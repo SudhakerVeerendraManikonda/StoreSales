@@ -1,0 +1,74 @@
+Assignment 4 Due 11:59PM Nov. 27th
+
+A store sells different kinds of products. For each product, the store
+has to apply sales tax. The tax they apply for each item depends on 
+two things.
+
+A. the residence of the customer
+B. any waiver or reduction in tax for a particular product, for example
+souvenirs have a lowered rate of 0.1% in some tax areas but not others.
+
+The application that fulfills the order right now only handles sales of
+two products and two taxation areas.
+
+class TShirt {
+  public double getPrice(TaxArea taxArea) {
+	  return salesPrice + salesPrice * taxArea.rate();
+  }
+}
+
+class Souvenir {
+  public double getPrice(TaxArea taxArea) {
+    double reduction = 0;
+    if (taxArea instanceof TXTaxArea)
+     reduction = 0.1;
+
+	return salesPrice + salesPrice * (taxArea.rate() - reduction);
+  }/
+}
+
+The store wants you to enhance the software so that
+
+A. more types of items can be included
+
+B. more tax areas can be supported
+
+They want you to redesign so that once you're done, no code has to change
+(but small new code can be added) to accommodate a new tax area or new
+type of item for sale.
+
+Write a class that will accept a list of items and compute the total
+price (items are still responsible for returning their total price
+including tax). Test it with one or two items and tax areas. Once you're done,
+try adding a new tax area and a new item and ensure no code change is
+necessary.
+
+
+1. Explain what design principles are being violated by the original design.
+
+The present design is violating OCP and LSP. It is restricted to only two products and whenever we try to add a new product the method has to be redefined according to the product type and complete code has to be written thus violating the open closed principle. Furthermore, in the Souvenir class by checking the type of instance it is violating Liskov's Substitution principle.
+
+2. Redesign and reimplement the code to fix those issues.
+
+3. Explain what design principles you are using in your solution.
+
+Single Responsibility Principle (SRP):
+We followed this principle particularly in separating the two functions in the main class. Earlier we had one method that accepts a list of products and returns the total price, but later we have separated that into three methods "getPrice", "getTotalPrice" and "getTaxReduction" so that they are more cohesive and do only one action.
+
+Open Closed Principle (OCP):
+We followed this principle keeping in view of the previous design that was restricted to only two products. The present design is extensible for any number of products with very minimal change in code. That is by adding the product or area or its reduction to the map would allow to extend the design for any number of products or tax areas.
+
+4. What design pattern are you using?
+
+In the initial stages of our design we forced ourselves to stick to a design pattern(Decorator Pattern) to address the problem. Though our design was adhering to various design principles like OCP, SRP, DIP while following the pattern, we were able to sense the design getting very heavy weight. Hence we reverted back and started approaching the solution in a different direction. Finally we ended up with a simple solution which focused on keeping the design light weight. The final design now does not have perfect match with any design pattern. 
+
+We learned that a pattern must fall in place by itself while we progress in the design of the problem, we shouldn't force ourselves to stick to particular design pattern.
+
+Total [100]: 100
+
+Program runs [20]:
+Test quality [20]:
+Test Coverage [10]:
+Code quality [10]:
+Design quality [20]:
+Response to questions [20]:

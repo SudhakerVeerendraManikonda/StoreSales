@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="assign4.StoreSalesTest" tests="10" failures="0" errors="0" timestamp="2013-11-27T22:39:59" hostname="Veeru-PC" time="0.112">
+  <properties/>
+  <testcase name="testTotalPriceForTwoProductsWithReductionOnBothProductsInOneArea" classname="assign4.StoreSalesTest" time="0.099"/>
+  <testcase name="testGetTotalPriceForInvalidTaxArea" classname="assign4.StoreSalesTest" time="0.001"/>
+  <testcase name="testGetTotalPriceForOneProductWithNoReduction" classname="assign4.StoreSalesTest" time="0.001"/>
+  <testcase name="testGetTotalPriceForEmptyTaxArea" classname="assign4.StoreSalesTest" time="0.001"/>
+  <testcase name="testGetTotalPriceForTwoProductsWithReductionOnOneProduct" classname="assign4.StoreSalesTest" time="0.001"/>
+  <testcase name="testGetTotalPriceForEmptyProductsList" classname="assign4.StoreSalesTest" time="0.0"/>
+  <testcase name="testGetTotalPriceAProductThatIsNotSoldInStore" classname="assign4.StoreSalesTest" time="0.001"/>
+  <testcase name="testCanary" classname="assign4.StoreSalesTest" time="0.0"/>
+  <testcase name="testGetTotalPriceListOfProductsThatAreBothSoldAndNotSoldInStore" classname="assign4.StoreSalesTest" time="0.001"/>
+  <testcase name="testGetTotalPriceForEmptyTaxAreaAndEmptyProductsList" classname="assign4.StoreSalesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
